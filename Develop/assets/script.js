@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   var lengthChar = window.prompt("How long do you want the password to be? 8-128");
-  if(lengthChar <=7 || lengthChar >=129){
+  if(!Number.isInteger(lengthChar) || lengthChar <=7 || lengthChar >=129){
     window.alert ("You didn't put a valid number, please try again!")
     return;
   }
